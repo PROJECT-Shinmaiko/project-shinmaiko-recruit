@@ -1,0 +1,408 @@
+/* 実行委員募集フォーム — プレビュー用 */
+
+.form-page {
+  min-height: 100vh;
+  background: var(--color-sand);
+  padding: 2rem 1rem 4rem;
+}
+
+.form-preview-banner {
+  max-width: 640px;
+  margin: 0 auto 1.5rem;
+  padding: 0.75rem 1rem;
+  background: #fff8e6;
+  border: 1px solid #e8c96a;
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  color: #6b5a20;
+  text-align: center;
+}
+
+.form-preview-banner a {
+  color: var(--color-sea);
+  font-weight: 500;
+}
+
+.form-card {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  border-top: 6px solid var(--color-sunset);
+}
+
+.form-header {
+  padding: 2rem 2rem 1.5rem;
+  border-bottom: 1px solid rgba(13, 45, 58, 0.08);
+}
+
+.form-header h1 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--color-sea-deep);
+  line-height: 1.5;
+  margin-bottom: 0.25rem;
+}
+
+.form-header .form-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-sea);
+  font-weight: 500;
+}
+
+.form-intro,
+.form-notice {
+  padding: 0 2rem 1.5rem;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.9;
+}
+
+.form-notice {
+  background: rgba(26, 77, 92, 0.04);
+  margin: 0 2rem 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius);
+  border-left: 3px solid var(--color-sea-light);
+}
+
+.form-notice h2 {
+  font-size: 0.85rem;
+  color: var(--color-sea-deep);
+  margin-bottom: 0.75rem;
+}
+
+.form-notice ul {
+  list-style: none;
+  font-size: 0.8rem;
+  line-height: 1.75;
+}
+
+.form-notice li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-notice li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+}
+
+form {
+  padding: 0 2rem 2rem;
+}
+
+.form-field {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(13, 45, 58, 0.06);
+}
+
+.form-field:last-of-type {
+  border-bottom: none;
+}
+
+.form-field label,
+.form-field legend {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.q-number {
+  display: inline-block;
+  min-width: 1.75rem;
+  margin-right: 0.35rem;
+  color: var(--color-sea);
+  font-weight: 700;
+}
+
+.other-inline {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(26, 77, 92, 0.05);
+  border-radius: 8px;
+  border-left: 3px solid var(--color-sunset-soft);
+}
+
+.other-inline label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.other-inline input[type="text"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  border: 1px solid rgba(13, 45, 58, 0.15);
+  border-radius: 8px;
+  background: var(--color-white);
+}
+
+.form-field .required {
+  color: var(--color-sunset);
+  font-size: 0.8rem;
+  margin-left: 0.35rem;
+}
+
+.form-field .optional {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-left: 0.35rem;
+}
+
+.form-field .hint {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  border: 1px solid rgba(13, 45, 58, 0.15);
+  border-radius: 8px;
+  background: var(--color-cream);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--color-sea);
+  box-shadow: 0 0 0 3px rgba(26, 77, 92, 0.12);
+}
+
+.form-field textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.checkbox-group,
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.checkbox-group label,
+.radio-group label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-weight: 400;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.checkbox-group input,
+.radio-group input {
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+  accent-color: var(--color-sea);
+}
+
+.form-field.is-hidden {
+  display: none;
+}
+
+.form-actions {
+  padding-top: 0.5rem;
+}
+
+.form-actions .btn-submit {
+  width: 100%;
+  padding: 1rem;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-white);
+  background: linear-gradient(135deg, var(--color-sunset) 0%, #d4653f 100%);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(224, 122, 74, 0.35);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.form-actions .btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(224, 122, 74, 0.45);
+}
+
+.form-thanks {
+  display: none;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.form-thanks.is-visible {
+  display: block;
+}
+
+.form-thanks h2 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--color-sea-deep);
+  margin-bottom: 1.5rem;
+}
+
+.form-thanks p {
+  color: var(--color-text-muted);
+  line-height: 2;
+  margin-bottom: 1rem;
+}
+
+.form-thanks .btn-back {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  color: var(--color-sea);
+  border: 1px solid var(--color-sea-light);
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.form-thanks .btn-back:hover {
+  background: rgba(26, 77, 92, 0.06);
+}
+
+form.is-hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .form-header,
+  .form-intro,
+  form {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .form-notice {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+  }
+}
+/* ===== 登録フォーム画面：暗黒感を消して初夏の新舞子カラーへ ===== */
+
+.form-page {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(142, 215, 243, 0.22) 0%,
+      rgba(126, 223, 211, 0.24) 42%,
+      rgba(255, 248, 234, 0.94) 100%
+    ),
+    var(--color-cream);
+  color: var(--color-ink);
+}
+
+/* 背景写真が暗く沈むのを防ぐ */
+.form-page::before,
+.form-page::after {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 248, 234, 0.28) 0%,
+      rgba(255, 248, 234, 0.46) 48%,
+      rgba(255, 248, 234, 0.86) 100%
+    );
+  box-shadow: none;
+}
+
+/* 写真背景そのものを明るくする指定がある場合の補正 */
+.form-hero,
+.form-hero-bg,
+.form-bg {
+  filter: brightness(1.35) saturate(1.08);
+}
+
+/* 見出し・本文を暗い背景用の薄文字から戻す */
+.form-page h1,
+.form-page h2,
+.form-page h3,
+.form-page p,
+.form-page li,
+.form-page small {
+  color: var(--color-ink);
+  text-shadow: none;
+}
+
+/* メインタイトル */
+.form-page h1 {
+  color: var(--color-ink);
+  text-shadow: none;
+}
+
+/* リード文 */
+.form-page .form-lead,
+.form-page .recruit-lead,
+.form-page .form-note,
+.form-page .recruit-sub,
+.form-page .recruit-form-note {
+  color: #345c64;
+  text-shadow: none;
+}
+
+/* 登録ボタン */
+.form-page .btn-primary,
+.form-page a.btn-primary {
+  background: var(--color-sea);
+  color: #ffffff;
+  border: 2px solid var(--color-sea);
+  box-shadow: 0 16px 36px rgba(0, 124, 137, 0.22);
+}
+
+.form-page .btn-primary:hover,
+.form-page a.btn-primary:hover {
+  background: var(--color-sea-deep);
+  border-color: var(--color-sea-deep);
+}
+
+/* 注意書き・説明カード */
+.form-page .notice,
+.form-page .form-card,
+.form-page .recruit-inner,
+.form-page .form-preview-banner {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.88) 0%,
+      rgba(255, 248, 234, 0.82) 65%,
+      rgba(126, 223, 211, 0.14) 100%
+    );
+  color: var(--color-ink);
+  border: 1px solid rgba(126, 223, 211, 0.36);
+  border-radius: 28px;
+  box-shadow: 0 22px 50px rgba(23, 50, 58, 0.08);
+  text-shadow: none;
+}
+
+.form-page .notice h3,
+.form-page .form-card h3 {
+  color: var(--color-ink);
+}
+
+.form-page .notice li,
+.form-page .form-card p {
+  color: #345c64;
+}
+
+/* 全体の暗い膜・影を強制的に軽くする */
+.form-page * {
+  text-shadow: none;
+}
