@@ -2442,10 +2442,7 @@ body {
     overflow-wrap: anywhere;
   }
 }
-<h2 class="section-title section-title--large involve-title">
-  「関わりしろ」を、<br>
-  一緒に見つける。
-</h2>
+
 /* ===== JOIN US見出し：スマホ用の自然な改行 ===== */
 
 @media (max-width: 700px) {
@@ -2455,7 +2452,29 @@ body {
     letter-spacing: 0.01em;
   }
 }
-<h2 class="section-title section-title--large involve-title">
-  「関わりしろ」を、<br>
-  一緒に見つける。
-</h2>
+
+/* ===== フォントウェイト正規化 ===== */
+
+/* 本文：読みやすさ優先で400に統一 */
+.philosophy-body p,
+.atmo-body p,
+.involve-block p,
+.notice ul,
+.notice li,
+.timeline p,
+.recruit-lead {
+  font-weight: 400;
+}
+
+/* リード・補足文：軽い強調 */
+.section-lead--left,
+.hero-lead,
+.shinmaiko-kicker {
+  font-weight: 500;
+}
+
+/* サブ見出し・ラベル：過剰な太さを抑える */
+.timeline-label,
+.welcome-note--light {
+  font-weight: 700;
+}
